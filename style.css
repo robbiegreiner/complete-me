@@ -4,7 +4,8 @@ body{
   flex-direction: column;
   align-items: center;
   background-color: lightgreen;
-  background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png")
+  background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+  color: steelblue;
 }
 
 h1{

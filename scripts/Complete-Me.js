@@ -1,7 +1,7 @@
-import Node from './Node.js';
+const Node = require('./Node.js');
 
 
-export default class CompleteMe {
+class CompleteMe {
   constructor() {
     this.root = null;
     this.wordCount = 0;
@@ -95,3 +95,5 @@ export default class CompleteMe {
 
 
 }
+
+module.exports = CompleteMe;

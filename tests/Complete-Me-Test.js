@@ -1,6 +1,6 @@
 import { assert } from 'chai';
-import CompleteMe from '../scripts/Complete-Me.js';
-import Node from '../scripts/Node.js';
+const CompleteMe = require('../scripts/Complete-Me.js');
+const Node = require('../scripts/Node.js');
 const text = "/usr/share/dict/words"
 const fs = require('fs')
 const dictionary = fs.readFileSync(text).toString().trim().split('\n')
