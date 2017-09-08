@@ -18,7 +18,6 @@ class CompleteMe {
 
     let currentNode = this.root;
 
-    // creates a childnode.letter node for each letter
     letters.forEach(letter => {
       if (!currentNode.childNode[letter]) {
         currentNode.childNode[letter] = new Node(letter);
