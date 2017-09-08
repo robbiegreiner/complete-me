@@ -7,6 +7,9 @@
     "test": "tests"
   },
   "scripts": {
+    "deploy": "gh-pages -d dist",
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "build": "./node_modules/webpack/bin/webpack.js",
     "test": "mocha --compilers js:babel-core/register tests"
   },
   "keywords": [],
@@ -24,6 +27,9 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "file-system": "^2.2.2"
+    "brfs": "^1.4.3",
+    "file-system": "^2.2.2",
+    "fs": "0.0.1-security",
+    "transform-loader": "^0.2.4"
   }
 }

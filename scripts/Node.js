@@ -1,4 +1,4 @@
-export default class Node {
+class Node {
   constructor(letter = null) {
     this.letter = letter;
     this.isFullWord = false;
@@ -7,3 +7,5 @@ export default class Node {
     this.lastTouched = 0;
   }
 }
+
+module.exports = Node;
