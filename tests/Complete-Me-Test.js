@@ -171,46 +171,45 @@ describe('Complete Me', () => {
     })
 
     it('should be able to select order of words returned by suggest', () => {
-      completeMe.insert('app')
-      completeMe.insert('apple')
-      completeMe.insert('applesauce')
-      completeMe.insert('apply')
+      completeMe.insert('goo')
+      completeMe.insert('good')
+      completeMe.insert('goodness')
 
-      let suggestions = completeMe.suggest('app');
+      let suggestions = completeMe.suggest('goo');
 
-      assert.deepEqual(suggestions, [ 'app', 'apple', 'applesauce', 'apply' ])
+      assert.deepEqual(suggestions, [ 'goo', 'good', 'goodness'])
 
-      completeMe.select('app');
-      suggestions = completeMe.suggest('app');
-      assert.deepEqual(suggestions, [ 'app', 'apple', 'applesauce', 'apply' ])
-
-      sleep(10);
-
-      completeMe.select('apply');
-      suggestions = completeMe.suggest('app');
-      assert.deepEqual(suggestions, [ 'apply', 'app', 'apple', 'applesauce' ])
+      completeMe.select('goo');
+      suggestions = completeMe.suggest('goo');
+      assert.deepEqual(suggestions, [ 'goo', 'good', 'goodness'])
 
       sleep(10);
 
-      completeMe.select('apple');
-      suggestions = completeMe.suggest('app');
-      assert.deepEqual(suggestions, [ 'apple', 'apply', 'app', 'applesauce' ])
+      completeMe.select('goodness');
+      suggestions = completeMe.suggest('goo');
+      assert.deepEqual(suggestions, [ 'goodness', 'goo', 'good'])
 
       sleep(10);
 
-      completeMe.select('app');
-      suggestions = completeMe.suggest('app');
-      assert.deepEqual(suggestions, [ 'app', 'apple', 'apply', 'applesauce' ])
+      completeMe.select('good');
+      suggestions = completeMe.suggest('goo');
+      assert.deepEqual(suggestions, [ 'good', 'goodness', 'goo'])
 
       sleep(10);
 
-      completeMe.select('apply');
+      completeMe.select('goo');
+      suggestions = completeMe.suggest('goo');
+      assert.deepEqual(suggestions, [ 'goo', 'good', 'goodness'])
+
       sleep(10);
-      completeMe.select('app');
+
+      completeMe.select('goodness');
       sleep(10);
-      completeMe.select('apply');
-      suggestions = completeMe.suggest('app');
-      assert.deepEqual(suggestions, [ 'apply', 'app', 'apple', 'applesauce' ])
+      completeMe.select('goo');
+      sleep(10);
+      completeMe.select('goodness');
+      suggestions = completeMe.suggest('goo');
+      assert.deepEqual(suggestions, [ 'goodness', 'goo', 'good'])
     })
 
   })

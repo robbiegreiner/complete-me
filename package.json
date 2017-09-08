@@ -2,7 +2,7 @@
   "name": "complete-me",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "Complete-Me.js",
   "directories": {
     "test": "tests"
   },
